@@ -1,0 +1,29 @@
+
+.red{
+    background-color: red;
+}
+.blovk{
+    background-color: rgb(195, 172, 172);
+    height: 600px;
+    width: 600px;
+    border: 2px solid black;
+    margin-bottom: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.blovk div{
+    height:190px;
+    width: 190px;
+    border: 2px solid rgb(0, 8, 0);
+}
+.grey{
+    background-color: gray;
+}
+.black{
+    background-color: black;
+}
+.btn{
+    position: absolute;
+    top: 200px;
+    left: 700px;
+}
