@@ -2,7 +2,7 @@ import { stat } from "fs";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AnyAction } from "redux";
-import { SendMessage, StartMessageListening, StopMessagesListening } from "../redux/chat-reducer";
+//import { SendMessage, StartMessageListening, StopMessagesListening } from "../redux/chat-reducer";
 import { AppstateType } from "../redux/redux-store";
 import s from './Chat.module.css'
  //const ws = new WebSocket('wss://social-network.samuraijs.com/handlers/ChatHandler.ashx');

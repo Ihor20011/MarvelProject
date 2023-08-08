@@ -26,16 +26,6 @@ const initiAlState={
     pageSize:18 as number,
     totalCount:0 as number,
     caracter:null as caracterType|null,
-    mainArray:  [
-        {position:'1',id:1,chageColorBlack:false,changeColorGray:false},
-        {position:'2',id:2,chageColorBlack:false,changeColorGray:false},
-        {position:'2',id:3,chageColorBlack:false,changeColorGray:false},
-        {position:'3',id:4,chageColorBlack:false,changeColorGray:false},
-        {position:'4',id:5,chageColorBlack:false,changeColorGray:false},
-        {position:'5',id:6,chageColorBlack:false,changeColorGray:false},
-        {position:'6',id:7,chageColorBlack:false,changeColorGray:false},
-        {position:'7',id:8,chageColorBlack:false,changeColorGray:false},
-        {position:'8',id:9,chageColorBlack:false,changeColorGray:false}] as Array<any>
 }
 type initiAlStateType=typeof initiAlState
 type ActionsType=ActionsTypeInfern<typeof actions>
@@ -59,33 +49,6 @@ type thunkType=BaseThunkType<ActionsType>
         caracter:null
         }
        }
-        case CHANGE:{
-            return{...state,
-            mainArray:state.mainArray.map((b)=>{
-                if (action.id===b.id){
-                    return{...b,chageColorBlack:true}
-                }
-                return{...b}
-            })
-            }
-        }
-        case CHANGEGRAY:{
-            return{...state,
-                mainArray:state.mainArray.map((b)=>{
-                    if (action.idnumber===b.id){
-                        return{...b,changeColorGray:true}
-                    }
-                    return{...b}
-                })
-            }
-        }
-        case NEW_GAME:{
-            return{...state,
-            mainArray:state.mainArray.map((b)=>{
-                return{...b,changeColorGray:false,chageColorBlack:false}
-            })
-            }
-        }
         default:
             return state
     }
