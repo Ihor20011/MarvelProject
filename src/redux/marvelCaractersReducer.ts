@@ -18,7 +18,6 @@ type caracterType={
         path:string,
         extension:string,
     },
-
 }
 const initiAlState={
     caracters:[ ] as Array<caracterType>,
@@ -63,32 +62,7 @@ const actions={
     close:()=>{
         return{type:CLOSE} as const 
     },
-    changeColor:(id:number)=>{
-        return{type:CHANGE,id:id} as const 
-    },
-    changeColorGray:(id:number)=>{
-        return{type:CHANGEGRAY,idnumber:id} as const 
-    },
-    newGame:()=>{
-    return{type:NEW_GAME} as const
-    }
 }
-export const NewGame=():thunkType=>{
-    return async(dispatch)=>{
-        dispatch(actions.newGame())
-    }
-}
-export const Change=(id:number):thunkType=>{
-    return async(dispatch)=>{
-      dispatch(actions.changeColor(id))
-    }
-}
-export const ChangeGray=(id:number):thunkType=>{
-    return async(dispatch)=>{
-      dispatch(actions.changeColorGray(id))
-    }
-}
-
 
 
 export const Close=():thunkType=>{
@@ -102,8 +76,6 @@ export const Close=():thunkType=>{
     dispatch(actions.setCaracter(array.results,array.total))
     }
 }
-
-
 export const SetCAractersName=(name:string):thunkType=>{
     return async(dispatch)=>{
     let array=await MarvelGetCaracters.FindCaracters(name)
